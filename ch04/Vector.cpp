@@ -110,6 +110,9 @@ Vector f()
   cout << "f()-->\n";
   int step = 0;
 
+  //cout << "f() step: " << step++ << "\n";
+  //Vector a = 10; //compile error if Vector(int) is explicit
+
   cout << "f() step: " << step++ << "\n";
   Vector x(1000);
 
