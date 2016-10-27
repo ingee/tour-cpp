@@ -33,4 +33,7 @@ int main()
   cout << "ch= " << ch << ", sizeof(ch)= " << sizeof(ch) << "\n";
   cout << "i= " << i << ", sizeof(i)= " << sizeof(i) << "\n";
   cout << "d= " << d << ", sizeof(d)= " << sizeof(d) << "\n";
+
+  auto f = float{0.1};
+  cout << "f= " << f << ", sizeof(f)= " << sizeof(f) << "\n";
 }
