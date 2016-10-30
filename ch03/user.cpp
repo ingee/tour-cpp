@@ -53,4 +53,5 @@ int main()
   catch (MyException e) {
     cout << "catch MyException\n";
   }
+  cout << "end of prgram\n";
 }
