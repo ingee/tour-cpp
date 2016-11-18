@@ -2,3 +2,5 @@
 *.exe
 *.swp
 *.obj
+*.o
+*.s
