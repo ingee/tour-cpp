@@ -4,11 +4,17 @@ using namespace std;
 
 string compose(const string& name, const string& domain)
 {
+  cout << "-- compose(name, domain) --\n";
+  cout << "name= " << name << ", len= " << name.length() << '\n';
+  cout << "domain= " << domain << ", len= " << domain.length() << '\n';
   return name + '@' + domain;
 }
 
 void print(const string& s)
 {
+  cout << "-- print(s) --\n";
+  cout << "s= " << s << ", len= " << s.length() << '\n';
+
   printf("For people who like printf: %s\n", s.c_str());
   cout << "For people who like streams: " << s << '\n';
 }
@@ -16,10 +22,17 @@ void print(const string& s)
 int main()
 {
   cout << "hey~~\n";
-  cout << "ch06. Strings and Regular Expressions\n\n";
+  cout << "ch06. Strings and Regular Expressions\n";
+  cout << "  - can c++ print Korean str?\n";
+  cout << "  - can c++ count Korean characters?\n";
 
+  //string compose
   auto addr = compose("ingee", "somewhere.earth");
-  cout << "my addr= " << addr << '\n';
+  cout << "my addr= " << addr << ", len= " << addr.length() << '\n';
+
+  //korean-string compose
+  addr = compose("김인기", "이세상_어딘가");
+  cout << "my addr= " << addr << ", len= " << addr.length() << '\n';
 
   string s {"ingee"};
   print(s);
