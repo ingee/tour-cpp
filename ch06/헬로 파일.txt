@@ -1,0 +1,4 @@
+this is a text file encoded as utf-8.
+utf-8 인코딩된 텍스트 파일입니다.
+hellow world.
+세상아 안녕.
