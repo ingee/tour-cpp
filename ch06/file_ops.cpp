@@ -37,6 +37,7 @@ int main()
   }
   catch (exception e) {
     cout << "exception catched.\n";
+    cout << e.what() << "\n";
   }
   catch (...) {
     cout << "something catched.\n";
