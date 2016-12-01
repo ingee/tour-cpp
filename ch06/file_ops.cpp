@@ -17,13 +17,15 @@ int main()
   cout << "hello, fstream~\n";
   cout << "I'll open text file and test about Korean text handling\n";
   cout << "  - if c++ fails to open file, it thows exception? -> no.\n";
-  cout << "  - can c++ opens Korean named file? -> yes@mac.\n";
-  cout << "  - can c++ reads Korean encoded text? can count it? -> yes@mac.\n";
+  cout << "  - can c++ opens Korean named file? -> yes.\n";
+  cout << "  - can c++ reads Korean encoded text? can count it?\n";
+  cout << "     -> yes@mac.\n";
+  cout << "     -> no@win. characters are not printed/decoded correctly.\n";
   cout << "\n";
 
   try {
     string fileNameArr[] = { "text-file-utf8.txt", "헬로 파일-utf8.txt" };
-    for (string fileName: fileNameArr) {
+    for (auto fileName: fileNameArr) {
       cout << "try to open file: " << fileName << "\n";
 
       ifstream myfile(fileName);
