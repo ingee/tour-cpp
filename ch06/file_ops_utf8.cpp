@@ -23,8 +23,9 @@ int main(int argc, const char* argv[])
   cout << "hello, " << argv[0] << "\n";
   cout << "what is different between a UTF-8 string written in source code\n";
   cout << " and a UTF-8 string read from UTF-8 text file?\n";
-  cout << " - are the byte-stream of both strings same?\n";
-  cout << "   -> no, different.\n";
+  cout << " - bytes of both strings are same? -> no @win7, yes @mac.\n";
+  cout << "   -> @win7, string from src-code has EUC-KR.\n";
+  cout << "   -> @mac, string from src-code has UTF-8.\n";
   cout << "   -> string from UTF-8 text file is definitely UTF-8\n";
   cout << "\n";
 
