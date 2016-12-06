@@ -27,7 +27,10 @@ int main()
   cout << "  - can c++ print Korean str?\n";
   cout << "     => yes (you should adjust save option @win\n";
   cout << "  - can c++ count Korean characters?\n";
-  cout << "     => yes (1 Korean character is counted as 3@mac and 2@win\n\n";
+  cout << "     => yes, but it counts byte-count, not char-count\n";
+  cout << "     => @mac 1 Korean character is counted as 3 (utf-8)\n";
+  cout << "     => @win7 1 Korean character is counted as 2 (euc-kr)\n";
+  cout << "\n";
 
   //string compose
   auto addr = compose("ingee", "somewhere.earth");
