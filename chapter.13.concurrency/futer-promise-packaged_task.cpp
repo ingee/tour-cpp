@@ -1,3 +1,8 @@
+//to build
+//  - @Ubuntu: g++ -std=c++11 -pthread <this-source-file>
+//  - @Win10: cl /EHsc <this-source-file>
+//
+
 #include <future>
 #include <thread>
 #include <numeric>
@@ -23,8 +28,8 @@ double comp(vector<double>& v)
   future<double> f1 {pt1.get_future()};
 
   double* first = &v[0];
-  thread t1 {move(pt0), first, first+v.size()/2, 0};
-  thread t2 {move(pt1), first+v.size()/2, first+v.size(), 0};
+  thread t1 {move(pt0), first, first+v.size()/2, 0.0};
+  thread t2 {move(pt1), first+v.size()/2, first+v.size(), 0.0};
 
   return f0.get() + f1.get();
 }
@@ -32,7 +37,8 @@ double comp(vector<double>& v)
 int main()
 {
   vector<double> vd {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-  cout << "result= " << comp(vd) << "\n";
+  double result = comp(vd);
+  cout << "result= " << result << "\n";
 
   return 0;
 }
