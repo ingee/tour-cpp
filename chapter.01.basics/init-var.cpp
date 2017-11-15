@@ -1,6 +1,7 @@
 #include <iostream>
 #include <complex>
 #include <vector>
+#include <typeinfo>
 
 using namespace std;
 
@@ -29,11 +30,21 @@ int main()
   auto ch = 'x';
   auto i = 123;
   auto d = 1.2;
-  cout << "b= " << b << ", sizeof(b)= " << sizeof(b) << "\n";
-  cout << "ch= " << ch << ", sizeof(ch)= " << sizeof(ch) << "\n";
-  cout << "i= " << i << ", sizeof(i)= " << sizeof(i) << "\n";
-  cout << "d= " << d << ", sizeof(d)= " << sizeof(d) << "\n";
+  cout << "b= " << b 
+    << ", typeid(b).name()= " << typeid(b).name() 
+    << ", sizeof(b)= " << sizeof(b) << "\n";
+  cout << "ch= " << ch 
+    << ", typeid(ch).name()= " << typeid(ch).name()
+    << ", sizeof(ch)= " << sizeof(ch) << "\n";
+  cout << "i= " << i 
+    << ", typeid(i).name()= " << typeid(i).name()
+    << ", sizeof(i)= " << sizeof(i) << "\n";
+  cout << "d= " << d 
+    << ", typeid(d).name()= " << typeid(d).name()
+    << ", sizeof(d)= " << sizeof(d) << "\n";
 
   auto f = float{0.1};
-  cout << "f= " << f << ", sizeof(f)= " << sizeof(f) << "\n";
+  cout << "f= " << f 
+    << ", typeid(f).name()= " << typeid(f).name()
+    << ", sizeof(f)= " << sizeof(f) << "\n";
 }
